@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thực hành bảng trong CSS</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 20px 30px; color: #222; line-height: 1.5; }
+h1 { font-size: 28px; }
+h2 { margin-top: 32px; font-size: 21px; }
+table, th, td { border: 1px solid black; }
+/* 1. Giữ các đường viền riêng biệt. */
+.border-table { border-collapse: separate; border-spacing: 2px; }
+/* 2. Gộp các đường viền liền kề thành một đường. */
+.collapse-table { border-collapse: collapse; }
+/* 3. Chiều rộng bảng 100%, chiều cao ô tiêu đề 50px. */
+.size-table { border-collapse: collapse; width: 100%; }
+.size-table th { height: 50px; }
+/* 4. Căn tiêu đề về bên trái. */
+.horizontal-table { border-collapse: collapse; width: 100%; }
+.horizontal-table th { text-align: left; }
+/* 5. Ô dữ liệu cao 50px, nội dung căn xuống dưới. */
+.vertical-table { border-collapse: collapse; width: 100%; }
+.vertical-table td { height: 50px; vertical-align: bottom; }
+/* 6. Khoảng cách giữa nội dung và đường viền ô. */
+.padding-table { border-collapse: collapse; }
+.padding-table th, .padding-table td { padding: 15px; }
+/* 7. Màu sắc trong bảng. */
+.color-table { border-collapse: collapse; width: 100%; }
+.color-table th { background-color: #333; color: white; }
+.color-table td { background-color: #f2f2f2; color: #333; }
+.color-table th, .color-table td { padding: 15px; }
+</style>
+</head>
+<body>
+<h1>Thực hành bảng trong CSS</h1>
+<h2>1. Đường viền của bảng</h2>
+<table class="border-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+<h2>2. Gộp đường viền của bảng</h2>
+<table class="collapse-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+<h2>3. Chiều rộng và chiều cao của bảng</h2>
+<table class="size-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+<h2>4. Căn chỉnh theo chiều ngang</h2>
+<table class="horizontal-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+<h2>5. Căn chỉnh theo chiều dọc</h2>
+<table class="vertical-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+<h2>6. Padding trong bảng</h2>
+<table class="padding-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+<h2>7. Màu sắc trong bảng</h2>
+<table class="color-table">
+<thead><tr><th scope="col">Họ tên</th><th scope="col">Tuổi</th><th scope="col">Lớp</th></tr></thead>
+<tbody>
+<tr><td>Nguyễn Văn A</td><td>20</td><td>K60</td></tr>
+<tr><td>Trần Thị B</td><td>21</td><td>K61</td></tr>
+</tbody>
+</table>
+</body>
+</html>
